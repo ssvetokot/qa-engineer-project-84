@@ -1,0 +1,56 @@
+---
+test-cases:
+  - summary: |
+      Проверка качества фотографий
+    status: fail
+
+  - summary: |
+      Проверка пустого поля в фильтре "Бренд"
+    status: fail
+
+  - summary: |
+      Проверка статичного фильтра "Бренд" при переходе на другие страницы каталога
+    status: fail
+
+  - summary: |
+      Проверка статичного фильтра "Цена" при переходе на другие страницы каталога
+    status: fail
+
+  - summary: |
+      Проверка фильтра "В наличии"
+    status: fail
+
+  - summary: |
+      Проверка поиска товаров по существующему ключевому слову
+    status: pass
+
+  - summary: |
+      
+    status: fail
+
+  - summary: |
+      
+    status: fail
+
+  - summary: |
+      
+    status: fail
+
+  - summary: |
+      
+    status: fail
+
+bugreports:
+  - summary: |
+      Фото товара не по размеру
+    environment: |
+      Google Chrome 135.0.7049.115 (Официальная сборка) (64 бит)
+      ОС Windows 11
+    steps-to-reproduce: |
+      - Зайти на главную страницу магазина
+    expected-result: |
+      Фото должно быть в пределах допустимой области, не обрезано
+    actual-result: |
+      Фотографии обрезаны, на некоторых карточках не видно половину товара
+
+    
