@@ -1,11 +1,11 @@
 ---
 test-cases:
   - summary: |
-      Проверка качества фотографий
+      Проверка фотографий на соответствие размерам и пропорциям
     status: fail
 
   - summary: |
-      Проверка дизайна кнопок в каталоге
+      Проверка размера кнопок в каталоге
     status: fail
 
   - summary: |
@@ -143,6 +143,7 @@ test-cases:
 bugreports:
   - summary: |
       Фото товара не по размеру
+      https://github.com/ssvetokot/Photo/blob/main/2025-05-06_21-34.png?raw=true
     environment: |
       Google Chrome 135.0.7049.115 (Официальная сборка) (64 бит)
       ОС Windows 11
