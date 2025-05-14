@@ -142,17 +142,20 @@ test-cases:
 
 bugreports:
   - summary: |
-      Фото товара не по размеру
-      https://github.com/ssvetokot/Photo/blob/main/2025-05-06_21-34.png?raw=true
+      Фотографии товаров обрезаются, теряя важную часть изображения
     environment: |
       Google Chrome 135.0.7049.115 (Официальная сборка) (64 бит)
       ОС Windows 11
     steps-to-reproduce: |
       - Зайти на главную страницу магазина
+      - Прокрутить страницу с товарами  
+      - Наблюдать отображение фотографий товаров
     expected-result: |
-      Фото должно быть в пределах допустимой области, не обрезано
+      Все фотографии товаров полностью помещаются в отведенную область, сохраняются пропорции оригинальных изображений
     actual-result: |
       Фотографии обрезаны, на некоторых карточках не видно половину товара
+    attachments: |
+      Скриншот ошибки: https://github.com/ssvetokot/Photo/blob/main/2025-05-06_21-34.png?raw=true
 
   - summary: |
       Не работает фильтр "В наличии"
@@ -208,6 +211,8 @@ bugreports:
       Появляются кнопки перехода между страницами каталога
     actual-result: |
       Кнопки пропали
+    attachments: |
+      Скриншот ошибки: https://github.com/ssvetokot/Photo/blob/main/2025-05-14_12-48.png?raw=true (как должно быть), https://github.com/ssvetokot/Photo/blob/main/2025-05-14_12-48_1.png?raw=true (как есть)
 
   - summary: |
       Не работает фильтр по категориям
